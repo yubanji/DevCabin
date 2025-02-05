@@ -30,20 +30,17 @@ body {
   margin-bottom: 1rem;
 }
 
-/* -------------------------
-   Form Box
--------------------------- */
 .login-box {
   padding: 2rem;
   border-radius: 8px;
   width: 300px;
-  text-align: center; /* Center text by default */
+  text-align: center;
 }
 
 /* Form groups */
 .form-group {
   margin-bottom: 1.5rem;
-  text-align: left; /* Label & input alignment */
+  text-align: left; 
 }
 
 .form-group label {
@@ -53,7 +50,6 @@ body {
   color: #ffffff;
 }
 
-/* Inputs */
 .form-group input {
   width: 95%;
   padding: 1rem;
@@ -87,13 +83,10 @@ body {
   text-decoration: underline;
 }
 
-/* -------------------------
-   Button
--------------------------- */
 .login-btn {
   width: 45%;
   padding: 0.75rem;
-  background-color: #007bff;
+  background-color: #273ACE;
   color: #ffffff;
   font-weight: bold;
   border: none;

@@ -7,7 +7,6 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Login />} />
-
       </Routes>
     </Router>
   );

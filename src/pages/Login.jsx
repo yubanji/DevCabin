@@ -4,10 +4,10 @@ import logo from "../styles/images/LogoWhite.png";
 
 const Login = () => {
   return (
-    <div className="login-container">
-      <img src={logo} alt="DevCabin" className="login-logo" />
-      <p className="login-title">DEVELOPER'S CODE CABINET</p>
-
+      <div className="login-container">
+        <img src={logo} alt="DevCabin" className="login-logo" />
+        <p className="login-title">DEVELOPER'S CODE CABINET</p>
+        
       <div className="login-box">
         <div className="form-group">
           <label>Username</label>
