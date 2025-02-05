@@ -58,6 +58,10 @@ const Registration = () => {
           </div>
 
           <div className={styles.formRow}>
+            <div className={styles.formGroup}>
+                <label>Employee ID</label>
+                <input type="text" name="employee_id" placeholder="EMPLOYEE ID" required />
+              </div>
 
             <div className={styles.formGroup}>
               <label>Company Email</label>
