@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+:root {
+  --primary-color: #4b4b4b;
+  --hover-color: #333333;
+  --background-start: #2e2e2e;
+  --background-end: #161616;
+  --text-color: #ffffff;
+  --border-color: #444444;
+  --input-bg: #ffffff;
+  --input-text: #525252;
+  --placeholder-color: #999999;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #282828;
+  background: linear-gradient(180deg, var(--background-start) 0%, var(--background-end) 100%);
+  color: var(--text-color);
+}
+
+.loginContainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginLogo {
+    max-width: 300px;
+}
+
+.loginTitle {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.loginBox {
+  padding: 2rem;
+  border-radius: 8px;
+  width: 400px;
+  text-align: center;
+}
+
+.formRow {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 1rem;
+}
+
+.formGroup {
+  flex: 1;
+  text-align: left;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  outline: none;
+}
+
+.formGroup input::placeholder {
+  color: var(--placeholder-color);
+  text-transform: uppercase;
+}
+
+.loginLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+}
+
+.loginLinks a {
+  color: var(--placeholder-color);
+  text-decoration: none;
+}
+
+.loginLinks a:hover {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+.loginBtn {
+  width: 50%;
+  padding: 0.75rem;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.loginBtn:hover {
+  background-color: var(--hover-color);
+}
