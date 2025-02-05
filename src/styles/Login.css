@@ -18,7 +18,7 @@ body {
   justify-content: center;
 }
 .login-logo {
-  max-width: 300px;  /* Adjust as needed */
+  max-width: 300px;
   margin-bottom: 1rem;
 }
 
@@ -37,7 +37,6 @@ body {
   text-align: center;
 }
 
-/* Form groups */
 .form-group {
   margin-bottom: 1.5rem;
   text-align: left; 
