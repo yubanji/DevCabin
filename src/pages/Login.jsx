@@ -9,43 +9,46 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleLogin = async (event) => {
-    event.preventDefault(); 
-
+    event.preventDefault();
+  
     if (!username || !password) {
       alert("Please enter both username and password.");
       return;
     }
-
+  
     const formData = { username, password };
-
+  
     try {
-      const response = await fetch(
-        "http://localhost/Devcabin/src/connection/register.php",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
+      const response = await fetch("http://localhost/Devcabin/src/connection/login.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });      
+  
+      const text = await response.text(); // Read raw response as text
+      console.log("Raw response:", text); // Log server response
+
+  
+      try {
+        const data = JSON.parse(text); // Try parsing JSON
+        if (response.ok && !data.error) {
+          alert("Login successful!");
+          localStorage.setItem("token", data.token);
+          localStorage.setItem("username", username);
+          navigate("/home");
+        } else {
+          alert(`Error: ${data.error || "Login failed"}`);
         }
-      );
-
-      const data = await response.json();
-      console.log("Server response:", response.status, data); 
-
-      if (response.ok) {
-        alert("Login successful!");
-        localStorage.setItem("token", data.token); //Store token in local storage
-        localStorage.setItem("username", username); //Store username in local storage
-        navigate("/home");
-      } else {
-        alert(`Error: ${data.error || "Login failed"}`);
+      } catch (jsonError) {
+        console.error("JSON Parse Error:", jsonError);
+        alert("Server returned an invalid response.");
       }
     } catch (error) {
       console.error("Error during login:", error);
       alert("There was an error with the login request.");
     }
   };
+  
 
   return (
     <div className="login-container">
